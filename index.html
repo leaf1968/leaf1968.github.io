@@ -153,6 +153,156 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-caculation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/12/caculation/">进制运算，基础</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/12/caculation/" class="archive-article-date">
+  	<time datetime="2020-07-12T06:48:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="进制运算，概述"><a href="#进制运算，概述" class="headerlink" title="进制运算，概述"></a>进制运算，概述</h3><h4 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h4><p>-进位制是一种计数方式<br/><br>-有限种数字符号来表示无限的数值<br/><br>-使用的数字符号的数目，进制基数/底数<br/></p>
+<p><strong>计算机喜欢二进制，但是二进制太长，使用大进制位可以解决这个问题</strong><br/><br><strong>因为8和16满足2的n次方的要求，所以经常使用八进制或十六进制表示</strong><br/></p>
+<blockquote>
+<p>1024=0b10000000000(二进制)<br/><br>1024=0o2000(八进制)<br/><br>1024=0x400(十六进制)<br/></p>
+</blockquote>
+<h4 id="二进制运算的基础"><a href="#二进制运算的基础" class="headerlink" title="二进制运算的基础"></a>二进制运算的基础</h4><p><strong>进制换算原理</strong><br/><br><strong>正整数N,基数位r</strong><br/><br><strong>N=d<sub>n-1</sub> d<sub>n-2</sub>…d<sub>1</sub>d<sub>0</sub></strong><br/><br><strong>=d<sub>n-1</sub>r<sup>n-1</sup>+ d<sub>n-2</sub>r<sup>n-2</sup>+…+d<sub>1</sub>r+d<sub>0</sub></strong><br/></p>
+<blockquote>
+<p>N=1024<br/><br>N=1&times;10<sup>3</sup>+2&times;10<sup>1</sup>+4(十进制)<br/><br>N=1&times;2<sup>10</sup><br/></p>
+</blockquote>
+<h5 id="二进制转换十进制：按权展开法"><a href="#二进制转换十进制：按权展开法" class="headerlink" title="二进制转换十进制：按权展开法"></a>二进制转换十进制：按权展开法</h5><blockquote>
+<p>N=0b01100101<br/><br>=1&times;2<sup>6</sup>+1&times;2<sup>5</sup>+1&times;2<sup>2</sup>+1<br/><br>=101<br><strong>权，“6”是二进制第一个1所在位数，以下同理</strong></p>
+</blockquote>
+<h5 id="十进制转换二进制：重复相除法"><a href="#十进制转换二进制：重复相除法" class="headerlink" title="十进制转换二进制：重复相除法"></a>十进制转换二进制：重复相除法</h5><table>
+<thead>
+<tr>
+<th>数值，重复除以二</th>
+<th align="center">商</th>
+<th align="right">余</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>101</td>
+<td align="center">50</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>50</td>
+<td align="center">25</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>25</td>
+<td align="center">12</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>12</td>
+<td align="center">6</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>6</td>
+<td align="center">3</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>3</td>
+<td align="center">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>1</td>
+<td align="center">0</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>&gt;<strong>从下往上取余数得该数二进制</strong><br/></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>&gt;N=101=0b01100101<br/></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机导论</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/计算//" class="article-tag-list-link color3">计算</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/12/caculation/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -319,6 +469,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机导论</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

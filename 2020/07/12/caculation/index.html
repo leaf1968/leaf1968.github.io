@@ -14,11 +14,14 @@
 <meta property="og:url" content="http://yoursite.com/2020/07/12/caculation/index.html">
 <meta property="og:site_name" content="繁花映彩，绿叶无声">
 <meta property="og:description" content="进制运算，概述定义：-进位制是一种计数方式-有限种数字符号来表示无限的数值-使用的数字符号的数目，进制基数&#x2F;底数 计算机喜欢二进制，但是二进制太长，使用大进制位可以解决这个问题因为8和16满足2的n次方的要求，所以经常使用八进制或十六进制表示  1024&#x3D;0b10000000000(二进制)1024&#x3D;0o2000(八进制)1024&#x3D;0x400(十六进制)  二进制运算的基础进制换算原理正整数N,基">
+<meta property="og:image" content="http://yoursite.com/2020/07/images/caculate/%E4%BA%8C%E8%BF%9B%E5%88%B6_%E5%8E%9F%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/images/caculate/%E6%B5%AE%E7%82%B9%E6%95%B0%E8%8C%83%E5%9B%B4.png">
 <meta property="article:published_time" content="2020-07-12T06:48:59.000Z">
-<meta property="article:modified_time" content="2020-07-12T08:57:55.299Z">
+<meta property="article:modified_time" content="2020-07-12T17:23:31.740Z">
 <meta property="article:author" content="树叶">
 <meta property="article:tag" content="计算机导论">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/images/caculate/%E4%BA%8C%E8%BF%9B%E5%88%B6_%E5%8E%9F%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81.png">
   
     <link rel="alternative" href="/atom.xml" title="繁花映彩，绿叶无声" type="application/atom+xml">
   
@@ -183,10 +186,10 @@
 <blockquote>
 <p>N=1024<br/><br>N=1&times;10<sup>3</sup>+2&times;10<sup>1</sup>+4(十进制)<br/><br>N=1&times;2<sup>10</sup><br/></p>
 </blockquote>
-<h5 id="二进制转换十进制：按权展开法"><a href="#二进制转换十进制：按权展开法" class="headerlink" title="二进制转换十进制：按权展开法"></a>二进制转换十进制：按权展开法</h5><blockquote>
+<h5 id="二进制转换十进制：按权展开法（整数）"><a href="#二进制转换十进制：按权展开法（整数）" class="headerlink" title="二进制转换十进制：按权展开法（整数）"></a>二进制转换十进制：按权展开法（整数）</h5><blockquote>
 <p>N=0b01100101<br/><br>=1&times;2<sup>6</sup>+1&times;2<sup>5</sup>+1&times;2<sup>2</sup>+1<br/><br>=101<br><strong>权，“6”是二进制第一个1所在位数，以下同理</strong></p>
 </blockquote>
-<h5 id="十进制转换二进制：重复相除法"><a href="#十进制转换二进制：重复相除法" class="headerlink" title="十进制转换二进制：重复相除法"></a>十进制转换二进制：重复相除法</h5><table>
+<h5 id="十进制转换二进制：重复相除法（整数）"><a href="#十进制转换二进制：重复相除法（整数）" class="headerlink" title="十进制转换二进制：重复相除法（整数）"></a>十进制转换二进制：重复相除法（整数）</h5><table>
 <thead>
 <tr>
 <th>数值，重复除以二</th>
@@ -240,7 +243,235 @@
 <td align="right"></td>
 </tr>
 </tbody></table>
-
+<h5 id="二进制转换十进制：按权展开法（小数）"><a href="#二进制转换十进制：按权展开法（小数）" class="headerlink" title="二进制转换十进制：按权展开法（小数）"></a>二进制转换十进制：按权展开法（小数）</h5><p><strong>N=d<sub>n-1</sub> d<sub>n-2</sub>…d<sub>1</sub>d<sub>0</sub></strong><br/><br><strong>=d<sub>n-1</sub>r<sup>n-1</sup>+ d<sub>n-2</sub>r<sup>n-2</sup>+…+d<sub>1</sub>r+d<sub>0</sub><br/></strong><br><strong>从-1次方开始</strong><br><br/></p>
+<blockquote>
+<p>N=0b0.11001<br/><br>=1&times;2<sup>-1</sup>+1&times;2<sup>-2</sup>+1&times;2<sup>-5</sup><br/><br>=0.78125=25/32</p>
+</blockquote>
+<h5 id="十进制转二进制：重复项惩罚（小数）"><a href="#十进制转二进制：重复项惩罚（小数）" class="headerlink" title="十进制转二进制：重复项惩罚（小数）"></a>十进制转二进制：重复项惩罚（小数）</h5><table>
+<thead>
+<tr>
+<th>数值，重复乘以二</th>
+<th align="center">积</th>
+<th align="right">取1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>25/32</td>
+<td align="center">1+9/16</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>9/16</td>
+<td align="center">1+1/8</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>8/1</td>
+<td align="center">1/4</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1/4</td>
+<td align="center">1/2</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>1/2</td>
+<td align="center">1</td>
+<td align="right">1</td>
+</tr>
+<tr>
+<td>&gt;<strong>上往下得二进制值</strong></td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>&gt;N=25/32=0b0.10011</td>
+<td align="center"></td>
+<td align="right"></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="有符号数与无符号数（正负值）"><a href="#有符号数与无符号数（正负值）" class="headerlink" title="有符号数与无符号数（正负值）"></a>有符号数与无符号数（正负值）</h3><p><strong>表示方法：在二进制值前加上一个符号位（0为整数，1为负数）</strong><br/><br><em>二进制数值：符号位（0或1）+数值位</em></p>
+<blockquote>
+<p>+237=0(符号位)11101101（数值位）<br>-237=1(符号位)11101101（数值位）</p>
+</blockquote>
+<h4 id="原码表示法"><a href="#原码表示法" class="headerlink" title="原码表示法"></a>原码表示法</h4><ul>
+<li>使用0表示正数、1表示负数</li>
+<li>规定符号位位于数值位第一位<br/></li>
+</ul>
+<p><strong>缺陷：</strong></p>
+<ul>
+<li>0有两种表示方法：00、10</li>
+<li>原码进行运算非常复杂，特别是两个操作数符号不同得时候<blockquote>
+<ul>
+<li>判断两个操作数得绝对值大小</li>
+<li>使用绝对值大得数减去绝对值小得数</li>
+<li>对于符号值，以绝对值大的为准</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="二进制的补码表示法"><a href="#二进制的补码表示法" class="headerlink" title="二进制的补码表示法"></a>二进制的补码表示法</h4><p><em>引入目的：</em> <br/></p>
+<ul>
+<li>减法运算复杂，寻找使用正数代替负数的方法 *</li>
+<li>使用加法代替减法 *<br/></li>
+<li><em>定义：x&gt;0,x取值为x；x&lt;0,x取值2<sup>n+1</sup>+x*</em><br/><blockquote>
+<p>n(4位二进制数)=4,x(所求数值)=13,计算x打的二进制原码和补码</p>
+<blockquote>
+<p>原码：x=0,1101<br>补码：x=0,1101</p>
+<br/>
+n=4,x=-12,计算x的二进制原码和补码
+原码：x=1,1101
+补码：x=2<sup>n+1</sup>+x<br/>=2<sup>4+1</sup>+(-13)<br/>=100000-1101<br/>=1,0011<br/>
+*补码得出来的值第一位都是符号位*<br/>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<p><strong>缺陷：还是引用了减法</strong></p>
+<hr>
+<h4 id="二进制的反码表示法"><a href="#二进制的反码表示法" class="headerlink" title="二进制的反码表示法"></a>二进制的反码表示法</h4><p><em>目的：</em> <br/><br><em>找出原码和补码之间的规律，消除过程中的减法</em><br/><br><strong>定义：x&gt;0,x取值为x；x&lt;0,x取值(2<sup>n+1</sup>-1)+x</strong><br/><br><strong>反码=符号位，原码数据位取反</strong></p>
+<blockquote>
+<p>x=-13,n=4,计算x的二进制原码和反码</p>
+<blockquote>
+<p>原码：x=1,1101<br>反码：y=(2<sup>4+1</sup>-1)+(-13)<br/><br>=011111-1101<br/><br>=10010<br/><br>(第一位为符号位)<br><br/></p>
+</blockquote>
+</blockquote>
+<hr>
+<p><strong>负数的反码=原码除符号位以外按位取反</strong><br/><br><strong>负数的补码等于反码+1</strong></p>
+<blockquote>
+<p>x=-1,n=4,计算x的二进制原码和反码，补码</p>
+<blockquote>
+<p>原码： x=1,0111<br/><br>反码： x=1,1000<br/><br>补码： x=1,1001<br/></p>
+</blockquote>
+</blockquote>
+<h4 id="小数的补码（计算机中储存的所有数都是补码）"><a href="#小数的补码（计算机中储存的所有数都是补码）" class="headerlink" title="小数的补码（计算机中储存的所有数都是补码）"></a>小数的补码（计算机中储存的所有数都是补码）</h4><p><strong>二进制小数的补码：x&gt;0,x取x；x&lt;0,x取2+x</strong><br/><br><strong>负数的反码等于原码除符号位外，按位取反。</strong><br/><br><strong>负数的补码等于反码+1</strong><br/><br><strong>也适用于二进制负小数</strong></p>
+<blockquote>
+<p>x=9/16,计算x的二进制原码和反码和补码</p>
+<blockquote>
+<p>因为x是正数，所以原码，反码，补码都相同，x=0,0.1001<br>x=-11/32,计算x的二进制原码和反码和补码<br>原码x=1,0.01011<br/><br>反码x=1,1.10100<br/><br>补码x=1,1.10101(末位+1)<br/></p>
+</blockquote>
+</blockquote>
+<hr>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><img src="../../images/caculate/%E4%BA%8C%E8%BF%9B%E5%88%B6_%E5%8E%9F%E7%A0%81%EF%BC%8C%E5%8F%8D%E7%A0%81%EF%BC%8C%E8%A1%A5%E7%A0%81.png" alt=""></p>
+<hr>
+<h4 id="定点数-amp-浮点数"><a href="#定点数-amp-浮点数" class="headerlink" title="定点数&amp;浮点数"></a>定点数&amp;浮点数</h4><h5 id="定点数"><a href="#定点数" class="headerlink" title="定点数"></a>定点数</h5><p><strong>定义：小数点固定在某个位置的数</strong><br/><br><strong>表示方法：</strong><br/></p>
+<ul>
+<li><strong>纯小数：小数点位于符号位和数值位之间</strong></li>
+<li><strong>纯整数：小数点位于数值位之后</strong><blockquote>
+<table>
+<thead>
+<tr>
+<th>数值</th>
+<th align="center">符号位</th>
+<th>数值位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.1011</td>
+<td align="center">0</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>-0.1011</td>
+<td align="center">1</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>1011</td>
+<td align="center">0</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>-1011</td>
+<td align="center">1</td>
+<td>1011</td>
+</tr>
+</tbody></table>
+</blockquote>
+</li>
+<li><strong>取非纯小数和非纯整数时，乘以比例因子以满足定点数保存格式</strong><blockquote>
+<p>10.01需要把小数点左移或右移两位，则需乘以比例因子</p>
+</blockquote>
+<h5 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h5></li>
+</ul>
+<p><em>需要原因：</em></p>
+<ul>
+<li><em>计算机处理的很大程度上不是纯小数或纯整数，定点数不够灵活</em></li>
+<li><em>数据范围很大，定点数难以表达</em></li>
+</ul>
+<p><strong>表示格式(科学计数法)</strong><br/><br><strong>N=S&times;r<sup>j</strong><br/><br><strong>S:尾数；r:基数；j:阶码</strong></p>
+<blockquote>
+<p>1234500=1.2345&times;10<sup>6<br/><br>1.2345:尾数；10:基数；6：阶码<br><br/><br>11.0101=0.110101&times;2<sup>10</sup><br/><br>=0.0110101&times;2<sup>11</sup><br/><br>(小数点左移两位，跨度4，2<sup>2</sup>,2=0b10,所以阶码是10)<br><em>存储在计算机的格式：</em><br>阶码符号位|阶码数值位|尾数符号位|尾数数值位（8位,不够后面补0）<br>—|:–:|:–:|—|<br>0|10|0|11010100|<br>0|11|0|01101010|<br><br/></p>
+</blockquote>
+<p><strong>表示范围：假设阶码值取m位，尾数值取n位</strong><br/><br><strong>阶码：[-(2<sup>m</sup>-1),2<sup>m</sup>-1)]</strong><br/><br><strong>尾数：</strong><br/></p>
+<ul>
+<li><strong>正数：[2<sup>-n</sup>,1-2<sup>-n</sup>]</strong><br/></li>
+<li><strong>负数：[-(1-2<sup>-n</sup>),-(2<sup>-n</sup>)]</strong><br><img src="../../images/caculate/%E6%B5%AE%E7%82%B9%E6%95%B0%E8%8C%83%E5%9B%B4.png" alt=""></li>
+</ul>
+<p><em>上溢：绝对值太大，浮点数无法表示</em><br/><br><em>下溢：绝对值太小，浮点数无法表示</em><br/></p>
+<p><strong>单精度浮点数：使用4字节，32位表达浮点数（float）</strong><br/><br><strong>双精度浮点数：使用8字节，64位表达浮点数（double）</strong><br/><br><br/><br/><br/></p>
+<p><strong>浮点数的规格化：</strong><br/><br><strong>尾数要求：尾数规定纯小数，首位必须是1</strong></p>
+<blockquote>
+<p>11.0101 = 0.110101&times;2<sup>10</sup></p>
+</blockquote>
+<blockquote>
+<p>设浮点数字长为16位，阶码为5位，尾数为11位，将十进制数13/128表示为二进制浮点数。<br/></p>
+<blockquote>
+<p>原码=反码=补码：x=0.0001101000（后三个0是为满足尾数11位要求）<br/><br>浮点数规格化:0.1101000*2<sup>-11</sup>(小数点右移三位)<br/><br>尾数位1101000 0000；尾数符：0；阶符：1；阶码0011（阶码位五位，阶符+数值）<br/><br>阶码符号位|阶码数值位|尾数符号位|尾数数值位<br>—|:–:|:–:|—|<br>1|0011|0|1101000 0000<br>所以，该数在内存储存形式：1 0011 0 1101000 0000</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>设浮点数字长为16位，阶码为5位，尾数为11位，将十进制数-54表示为二进制浮点数。<br/></p>
+<blockquote>
+<p>原码=1,11011<br/><br>浮点数规格化：-0.110110&times;2<sup>110</sup>(小数点右移六位，110；尾数符为：1；尾数为：110110)<br/><br>尾数为11位：原码尾数：110110 00000（补5个0，11位）<br/><br>尾数反码：001001 11111<br/><br>尾数补码：001010 00000(计算机储存的数据都是补码)<br/><br>阶码符号位|阶码数值位|尾数符号位|尾数数值位<br>—|:–:|:–:|—|<br>0|0110|1|001010 00000</p>
+</blockquote>
+</blockquote>
+<h5 id="定点数与浮点数对比"><a href="#定点数与浮点数对比" class="headerlink" title="定点数与浮点数对比"></a>定点数与浮点数对比</h5><ul>
+<li>当定点数与浮点数位数相同时，浮点是表示的范围更大</li>
+<li>当浮点数尾数为规格化为数时，浮点数的精度更高</li>
+<li>浮点数运算包含阶码和尾数，浮点数的运算更为复杂</li>
+<li>浮点数在数的表示范围、精度、溢出处理、编程等方面优于定点数</li>
+<li>浮点数在数的运算规则、运算速度、硬件成本方面不如定点数</li>
+</ul>
+<h5 id="定点数的加减法（Xmod2-X除以2的余数）"><a href="#定点数的加减法（Xmod2-X除以2的余数）" class="headerlink" title="定点数的加减法（Xmod2,X除以2的余数）"></a>定点数的加减法（Xmod2,X除以2的余数）</h5><ul>
+<li><strong>整数加法： A[补码]+B[补]=[A+B][A=B的补码]（mod2<sup>n+1</sup>）</strong></li>
+<li><strong>小数加法： A[补]+B[补]=[A+B][补]（mod2）</strong></li>
+</ul>
+<p><strong>数值位与符号位一同运算，并将符号位产生的进位自然丢掉（数值位可以进位到符号位）</strong></p>
+<blockquote>
+<p>A=-110010,B=001101,求A+B</p>
+<blockquote>
+<p>A[原]=1,110010;A[反]=1,001101;A[补]=1,001110<br/><br>B[补]=0,001101<br/><br>(A+B)[补]=A[补]+B[补]=1,011011(符号位一同运算)<br>A+B=-100101</p>
+</blockquote>
+</blockquote>
+<p><strong>判断溢出（如果每个数都又八位二进制数表示，则相加结果的绝对值不在取值范围时，则会发生溢出）</strong></p>
+<ul>
+<li><p>双符号位判断法：<br/><br>  <em>单符号位表示变成双符号位：0变为00，1变为11<br/>,双符号位产生的进位丢弃，结果的双符号位不同则表示溢出</em></p>
+<blockquote>
+<p>A=-1001 0000,B=-1101 0000,求A+B</p>
+<blockquote>
+<p>A[补码] = 11,0111 0000<br/><br>B[补码] = 11,0011 0000<br/><br>A[补码]+B[补码] = 10,1010 0000(符号位不同，表示溢出)<br/></p>
+</blockquote>
+</blockquote>
+</li>
+<li><p><strong>整数加法： A[补码]+B[补]=[A+（-B）][A=B的补码]（mod2<sup>n+1</sup>）</strong></p>
+</li>
+<li><p><strong>小数加法： A[补]+B[补]=[A+（-B）][补]（mod2）</strong></p>
+</li>
+</ul>
+<p><em>-B[补]=B[补]连同符号位，按位取反，末位+1</em><br/></p>
+<blockquote>
+<p>B[补]=1,0010101;-B[补]=1,1101011<br/></p>
+</blockquote>
+<blockquote>
+<p>A=1100 1000,B=-0011 0100,求A-B<br/></p>
+<blockquote>
+<p>A[原]=0,1100 1000=A[补]<br/><br>B[补]=1,1100 1100<br/><br>-B[补]=0,00110100<br/><br>(A-B)[补]=(A+(-B))[补]=0,1111 1100(用双符号位判断是否溢出)<br/><br>A-B=1111 1100</p>
+</blockquote>
+</blockquote>
+<h5 id="定点数的加减法"><a href="#定点数的加减法" class="headerlink" title="定点数的加减法"></a>定点数的加减法</h5>
       
 
       
